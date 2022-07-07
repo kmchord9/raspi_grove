@@ -1,0 +1,14 @@
+version: "3.5"
+
+services:
+  node-red:
+    build: ./compose/node
+    environment:
+      - TZ=Aisa/Tokyo
+    ports:
+      - 1880:1880
+    devices:
+      - "/dev/gpiomem:/dev/gpiomem"
+      - "/dev/i2c-1:/dev/i2c-1"
+    volumes:
+      - ./volume/node/node-red-data:/data
