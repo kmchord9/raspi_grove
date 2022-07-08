@@ -1,5 +1,7 @@
 FROM nodered/node-red
 
+RUN apk add python3-dev
+
 RUN pip3 install \
     wheel
 
